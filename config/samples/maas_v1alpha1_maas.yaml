@@ -1,0 +1,12 @@
+apiVersion: maas.dev.y/v1alpha1
+kind: MaaS
+metadata:
+  labels:
+    app.kubernetes.io/name: maas
+    app.kubernetes.io/instance: maas-sample
+    app.kubernetes.io/part-of: maas-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: maas-operator
+  name: maas-sample
+spec:
+  # TODO(user): Add fields here

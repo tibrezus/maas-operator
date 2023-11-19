@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: maas-operator
 repo: github.com/tibrezus/maas-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: dev.y
+  group: maas
+  kind: MaaS
+  path: github.com/tibrezus/maas-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"

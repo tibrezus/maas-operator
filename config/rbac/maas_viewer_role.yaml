@@ -1,0 +1,27 @@
+# permissions for end users to view maas.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: maas-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: maas-operator
+    app.kubernetes.io/part-of: maas-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: maas-viewer-role
+rules:
+- apiGroups:
+  - maas.dev.y
+  resources:
+  - maas
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - maas.dev.y
+  resources:
+  - maas/status
+  verbs:
+  - get
